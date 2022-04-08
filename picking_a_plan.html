@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Picking a Plan | Cloud9 User Documentation</title>
+    <link href="./assets/min/styles.css" rel="stylesheet" type="text/css">
+    <link rel="icon" type="image/x-icon" href="./assets/img/favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <iframe id="header_iframe" height="50px" width="100%" src="" scrolling="no" frameborder="0"></iframe>
+    <div id="wrapper" class="wrapper">
+      <div class="container">
+        <div class="row">
+          <div class="span3">
+            <div class="sidebar-nav">
+              <div id="search-header">
+                <form>
+                  <input id="st-search-input" name="search" type="text" value="" title="Press Enter for results" placeholder="Search the docs" style="width: 182px" class="input focused span3 st-search-input">
+                </form>
+              </div>
+              <div id="st-results-container"></div>
+              <div id="doc-nav" class="scroll-pane">
+                <ul id="nav">
+                  <li class="nav-section">
+                    <div class="nav-section-header"><a href="index.html">Home</a></div>
+                  </li>
+                  <!-- li.nav-section-->
+                  <!--   .nav-section-header-->
+                  <!--     a(href='https://www.youtube.com/user/c9ide/videos?flow=grid&view=1', target='_blank') Video Tutorials-->
+                  <li class="nav-section">
+                    <div class="nav-section-header"><a href="javascript:void(0)">Getting Started</a><i class="icon-chevron-down tocNavArrow"></i><i class="icon-chevron-up tocNavArrow"></i></div>
+                    <ul>
+                      <li class="nav-submenu-item"><a href="create_a_workspace.html">Create a workspace</a></li>
+                      <li class="nav-submenu-item"><a href="run_an_application.html">Run an application</a></li>
+                      <li class="nav-submenu-item"><a href="setup_a_database.html">Set up a database</a></li>
+                      <li class="nav-submenu-item"><a href="share_a_workspace.html">Share a workspace</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-section">
+                    <div class="nav-section-header"><a href="javascript:void(0)">Features</a><i class="icon-chevron-down tocNavArrow"></i><i class="icon-chevron-up tocNavArrow"></i></div>
+                    <ul>
+                      <li class="nav-submenu-item"><a href="supported_languages.html">Supported Languages</a></li>
+                      <li class="nav-submenu-item"><a href="syntax_highlighting_themes.html">Syntax Highlighting & Themes</a></li>
+                      <!-- li.nav-submenu-item-->
+                      <!--   a(href='collaboration.html') Collaboration-->
+                      <!-- li.nav-submenu-item-->
+                      <!--   a(href='colorpicker.html') Color Picker-->
+                      <li class="nav-submenu-item"><a href="multiple_cursors.html">Multiple Cursors</a></li>
+                      <!-- li.nav-submenu-item-->
+                      <!--   a(href='revisions.html') Revisions-->
+                      <li class="nav-submenu-item"><a href="language_analysis.html">Language Analysis</a></li>
+                      <li class="nav-submenu-item"><a href="autocompletion.html">Code Autocompletion</a></li>
+                      <!-- li.nav-submenu-item-->
+                      <!--   a(href='uploading_downloading.html') Uploading Files and Downloading Your Project-->
+                      <!-- li.nav-submenu-item-->
+                      <!--   a(href='gotofile_and_definition.html') Using Goto File and Goto Definition-->
+                      <li class="nav-submenu-item"><a href="searching_in_files.html">Searching and Replacing in Files</a></li>
+                      <!-- li.nav-submenu-item-->
+                      <!--   a(href='git_blame.html') Git Blame-->
+                      <!-- li.nav-submenu-item-->
+                      <!--   a(href='zen_mode.html') Zen Mode-->
+                      <li class="nav-submenu-item"><a href="custom_runners.html">Custom Runners</a>
+                        <ul>
+                          <li class="nav-submenu-item"><a href="java_runner.html">Making a Java Runner</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="nav-section">
+                    <div class="nav-section-header"><a href="javascript:void(0)">IDE Components</a><i class="icon-chevron-down tocNavArrow"></i><i class="icon-chevron-up tocNavArrow"></i></div>
+                    <ul>
+                      <!-- li.nav-submenu-item-->
+                      <!--   a(href='ide_overview.html') IDE Overview-->
+                      <li class="nav-submenu-item"><a href="the_editor.html">The Editor</a></li>
+                      <!-- li.nav-submenu-item-->
+                      <!--   a(href='console.html') The Console-->
+                      <li class="nav-submenu-item"><a href="dashboard.html">The Dashboard</a></li>
+                      <!-- li.nav-submenu-item-->
+                      <!--   a(href='project_bar.html') The Project Bar-->
+                      <!-- li.nav-submenu-item-->
+                      <!--   a(href='status_bar.html') The Status Bar-->
+                      <!-- li.nav-submenu-item-->
+                      <!--   a(href='terminal.html') The Terminal-->
+                      <!-- li.nav-submenu-item-->
+                      <!--   a(href='ide_preferences.html') IDE Preferences-->
+                      <!-- li.nav-submenu-item-->
+                      <!--   a(href='tab_functions.html') Tab Functions-->
+                      <!-- li.nav-submenu-item-->
+                      <!--   a(href='keybindings.html') Commands and Keybindings-->
+                    </ul>
+                  </li>
+                  <li class="nav-section">
+                    <div class="nav-section-header"><a href="javascript:void(0)">Creating Workspaces</a><i class="icon-chevron-down tocNavArrow"></i><i class="icon-chevron-up tocNavArrow"></i></div>
+                    <ul>
+                      <li class="nav-submenu-item"><a href="creating_new_workspace.html">Creating a New Workspace</a></li>
+                      <li class="nav-submenu-item"><a href="ssh_workspaces.html">Setting up SSH Workspaces</a></li>
+                      <li class="nav-submenu-item"><a href="setting_up_github_workspace.html">Setting up a GitHub Workspace</a></li>
+                      <li class="nav-submenu-item"><a href="setting_up_bitbucket_workspace.html">Setting up a Bitbucket Workspace</a></li>
+                      <li class="nav-submenu-item"><a href="setting_up_gitlab_workspace.html">Setting up a GitLab Workspace</a></li>
+                      <li class="nav-submenu-item"><a href="ftp_workspaces.html">Creating an FTP Workspace</a></li>
+                      <li class="nav-submenu-item"><a href="run_your_own_workspace.html">Running Your Own SSH Workspace</a></li>
+                      <li class="nav-submenu-item"><a href="picking_a_plan.html">Picking a Plan</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-section">
+                    <div class="nav-section-header"><a href="javascript:void(0)">Running and Debugging Code</a><i class="icon-chevron-down tocNavArrow"></i><i class="icon-chevron-up tocNavArrow"></i></div>
+                    <ul>
+                      <li class="nav-submenu-item"><a href="running_and_debugging_code.html">Running and Debugging Your Code</a></li>
+                      <li class="nav-submenu-item"><a href="common_errors.html">Common Errors</a></li>
+                      <li class="nav-submenu-item"><a href="terminal_monitor.html">Terminal Monitor</a></li>
+                      <li class="nav-submenu-item"><a href="writing_nodejs_hello_world.html">Writing a Node.js App</a>
+                        <ul>
+                          <li class="nav-submenu-item"><a href="installing_npm_modules.html">Installing NPM Modules</a></li>
+                          <li class="nav-submenu-item"><a href="creating_coffeescript_app.html">Creating a Coffeescript App</a></li>
+                        </ul>
+                      </li>
+                      <li class="nav-submenu-item"><a href="writing_a_python_app.html">Writing a Python App</a>
+                        <ul>
+                          <li class="nav-submenu-item"><a href="installing_python_packages.html">Installing Python Packages</a></li>
+                          <li class="nav-submenu-item"><a href="running_python_cgi.html">Running a Python CGI Server</a></li>
+                        </ul>
+                      </li>
+                      <li class="nav-submenu-item"><a href="writing_a_ruby_app.html">Writing a Ruby App</a>
+                        <ul>
+                          <li class="nav-submenu-item"><a href="installing_ruby_gems.html">Installing Ruby Gems</a></li>
+                          <li class="nav-submenu-item"><a href="running_a_rails_app.html">Running a Rails App</a></li>
+                        </ul>
+                      </li>
+                      <li class="nav-submenu-item"><a href="writing_a_php_app.html">Writing a PHP App</a>
+                        <ul>
+                          <li class="nav-submenu-item"><a href="editing_wordpress_sites.html">Editing Remote WordPress Websites</a></li>
+                          <li class="nav-submenu-item"><a href="running_wordpress_on_cloud9.html">Running WordPress on Cloud9</a></li>
+                        </ul>
+                      </li>
+                      <li class="nav-submenu-item"><a href="writing_a_go_app.html">Writing a Go App</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-section">
+                    <div class="nav-section-header"><a href="javascript:void(0)">Database and Persistence</a><i class="icon-chevron-down tocNavArrow"></i><i class="icon-chevron-up tocNavArrow"></i></div>
+                    <ul>
+                      <li class="nav-submenu-item"><a href="setting_up_mysql.html">Using MySQL</a>
+                        <ul>
+                          <li class="nav-submenu-item"><a href="setting_up_phpmyadmin.html">Using PHPMyAdmin</a></li>
+                        </ul>
+                      </li>
+                      <li class="nav-submenu-item"><a href="setting_up_mongodb.html">Using MongoDB</a></li>
+                      <li class="nav-submenu-item"><a href="setting_up_couchdb.html">Using CouchDB</a></li>
+                      <li class="nav-submenu-item"><a href="setting_up_postgresql.html">Using PostgreSQL</a></li>
+                      <li class="nav-submenu-item"><a href="setting_up_redis.html">Using Redis</a></li>
+                      <li class="nav-submenu-item"><a href="setting_up_sqlite3.html">Using SQLite</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-section">
+                    <div class="nav-section-header"><a href="javascript:void(0)">Deploying Code</a><i class="icon-chevron-down tocNavArrow"></i><i class="icon-chevron-up tocNavArrow"></i></div>
+                    <ul>
+                      <!-- li.nav-submenu-item-->
+                      <!--   a(href='deploying_code.html') Deploying Your Code-->
+                      <li class="nav-submenu-item"><a href="deploying_via_cli.html">Deploying via the Command Line</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-section">
+                    <div class="nav-section-header"><a href="javascript:void(0)">Popular Frameworks</a><i class="icon-chevron-down tocNavArrow"></i><i class="icon-chevron-up tocNavArrow"></i></div>
+                    <ul>
+                      <li class="nav-submenu-item"><a href="frameworks_angularjs.html">AngularJS</a></li>
+                      <li class="nav-submenu-item"><a href="frameworks_drupal.html">Drupal</a></li>
+                      <li class="nav-submenu-item"><a href="frameworks_express.html">Express</a></li>
+                      <li class="nav-submenu-item"><a href="frameworks_ghost.html">Ghost</a></li>
+                      <li class="nav-submenu-item"><a href="frameworks_ionic.html">Ionic</a></li>
+                      <li class="nav-submenu-item"><a href="frameworks_jekyll.html">Jekyll</a></li>
+                      <li class="nav-submenu-item"><a href="frameworks_joomla.html">Joomla</a></li>
+                      <li class="nav-submenu-item"><a href="frameworks_koa.html">KoaJS</a></li>
+                      <li class="nav-submenu-item"><a href="frameworks_laravel.html">Laravel</a></li>
+                      <li class="nav-submenu-item"><a href="frameworks_meteor.html">Meteor</a></li>
+                      <li class="nav-submenu-item"><a href="frameworks_symfony2.html">Symfony</a></li>
+                      <li class="nav-submenu-item"><a href="frameworks_wordpress.html">Wordpress</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-section">
+                    <div class="nav-section-header"><a href="javascript:void(0)">FAQ</a><i class="icon-chevron-down tocNavArrow"></i><i class="icon-chevron-up tocNavArrow"></i></div>
+                    <ul>
+                      <li class="nav-submenu-item"><a href="faq_general.html">General</a></li>
+                      <li class="nav-submenu-item"><a href="faq_php.html">PHP</a></li>
+                      <li class="nav-submenu-item"><a href="faq_python.html">Python</a></li>
+                      <li class="nav-submenu-item"><a href="faq_ssh.html">SSH workspaces</a></li>
+                    </ul>
+                  </li>
+                  <div class="alert alert-info">These articles are <a href="https://www.github.com/c9open/docs.c9.io">open source</a>! Feel free to pull and contribute.</div>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="span12 documentationContainer">
+            <div id="content">
+              <div id="toh_btn" onclick="toggleTOH(this)"></div>
+              <h1>Picking a Plan</h1>
+              <div><p>The <a href="https://c9.io/web/site/pricing">Plans and Pricing Page</a> has the basics for the available plans but here, we&#39;ll break down the details of workspaces.</p>
+<h2 id='workspace-choices'><a class='heading_anchor' href='#workspace-choices'><i class='headerLinkIcon'></i></a>Workspace Choices</h2>
+<p>With Cloud9, you write code, run commands, and build applications in workspaces (virtual machines) hosted on Google Cloud. You&#39;re free to resize workspaces at any time so don&#39;t fret about their initial sizing. Following are the different types of workspaces and their properties:</p>
+<h3 id='micro-workspace'><a class='heading_anchor' href='#micro-workspace'><i class='headerLinkIcon'></i></a>Micro Workspace</h3>
+<ul>
+<li>512MB RAM</li>
+<li>1GB Disk space</li>
+<li>1 CPU</li>
+<li>Private</li>
+</ul>
+<h3 id='small-workspace'><a class='heading_anchor' href='#small-workspace'><i class='headerLinkIcon'></i></a>Small Workspace</h3>
+<ul>
+<li>512MB RAM</li>
+<li>5GB Disk space</li>
+<li>1 CPU</li>
+<li>Private</li>
+</ul>
+<h3 id='medium-workspace'><a class='heading_anchor' href='#medium-workspace'><i class='headerLinkIcon'></i></a>Medium Workspace</h3>
+<ul>
+<li>1GB RAM</li>
+<li>10GB Disk space</li>
+<li>1 CPU</li>
+<li>Private</li>
+</ul>
+<h3 id='large-workspace'><a class='heading_anchor' href='#large-workspace'><i class='headerLinkIcon'></i></a>Large Workspace</h3>
+<ul>
+<li>2GB RAM</li>
+<li>20GB Disk space</li>
+<li>1 CPU</li>
+<li>Private</li>
+</ul>
+<h3 id='ssh-workspace'><a class='heading_anchor' href='#ssh-workspace'><i class='headerLinkIcon'></i></a>SSH Workspace</h3>
+<ul>
+<li>Resources determined by user</li>
+<li>Private</li>
+</ul>
+<h3 id='community-workspaces'><a class='heading_anchor' href='#community-workspaces'><i class='headerLinkIcon'></i></a>Community Workspaces</h3>
+<ul>
+<li>512MB RAM</li>
+<li>1GB Disk space</li>
+<li>1 CPU</li>
+<li>Publicly readable</li>
+<li>Archived after a week of inactivity (restored unchanged when you open it again)</li>
+</ul>
+<p>Given the resources from your plan, you may make as many private workspaces as you&#39;d like. For example, if you&#39;re signed up for the large plan with 80gb of storage, you could use that to have 4 different large workspaces, each with 20gb of storage. With those 4 workspaces, you would have no resources left to make further private workspaces although you could still make more community workspaces.</p>
+<h2 id='reaching-the-limits'><a class='heading_anchor' href='#reaching-the-limits'><i class='headerLinkIcon'></i></a>Reaching the Limits</h2>
+<p>When a workspace reaches its RAM limit, you will be notified and processes may be killed to stay within the limit.</p>
+<p>When the storage limit within a workspace is reached, the terminal will display a message to let you know. Any downloads will be stopped.</p>
+<h2 id='all-plans'><a class='heading_anchor' href='#all-plans'><i class='headerLinkIcon'></i></a>All plans</h2>
+<p>The following features are provided with the free plan and all paid plans.</p>
+<ul>
+<li><strong>Unlimited Community Workspaces</strong> - Each community workspace is readable by anyone, like a public GitHub repository.</li>
+<li><strong>Team collaboration</strong> - You can invite coworkers, classmates, and anyone with an email address or Cloud9 account to work with you, real-time, giving read/write privileges to whomever you choose. Collaboration takes place live so you can see one another manipulating code real-time.</li>
+<li><strong>VMs hosted on Google Cloud</strong> - Each VM/workspace is allotted resources according to your chosing. Those resources are important because each workspace is running on a VM hosted on Google Cloud.</li>
+<li><strong>Sudo Shell Access/Terminal</strong> - Sudo access allows you to install your own programs or languages, giving them nearly the same amount of access they might have on a local machine.</li>
+<li><strong>SSD Performance</strong> - VM&#39;s are hosted on SSD&#39;s to speed up processes and development.</li>
+<li><strong>Running on Docker</strong> - Workspaces are powered by Docker Ubuntu containers that give you full freedom over your environment, including sudo rights.</li>
+</ul>
+
+              </div>
+              <div id="disqus_thread"></div>
+            </div>
+          </div>
+          <div id="tocHolder" class="span2"></li><ol class='tocContainer level_1'><li class='tocItem level_2'><a href='#workspace-choices'>Workspace Choices</a><ol class='tocContainer level_2'><li class='tocItem level_3'><a href='#micro-workspace'>Micro Workspace</a></li><li class='tocItem level_3'><a href='#small-workspace'>Small Workspace</a></li><li class='tocItem level_3'><a href='#medium-workspace'>Medium Workspace</a></li><li class='tocItem level_3'><a href='#large-workspace'>Large Workspace</a></li><li class='tocItem level_3'><a href='#ssh-workspace'>SSH Workspace</a></li><li class='tocItem level_3'><a href='#community-workspaces'>Community Workspaces</a></li></ol></li><li class='tocItem level_2'><a href='#reaching-the-limits'>Reaching the Limits</a></li><li class='tocItem level_2'><a href='#all-plans'>All plans</a></li></ol></li></ol>
+          </div>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js" type="text/javascript"></script>
+        <script src="./assets/min/javascripts.js" type="text/javascript"></script>
+      </div>
+      <div class="push"></div>
+    </div>
+    <footer>
+      <iframe id="footer_iframe" height="290px" width="100%" src="" scrolling="no" frameborder="0"></iframe>
+    </footer>
+  </body>
+</html>

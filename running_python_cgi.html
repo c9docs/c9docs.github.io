@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Running a Python CGI server | Cloud9 User Documentation</title>
+    <link href="./assets/min/styles.css" rel="stylesheet" type="text/css">
+    <link rel="icon" type="image/x-icon" href="./assets/img/favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <iframe id="header_iframe" height="50px" width="100%" src="" scrolling="no" frameborder="0"></iframe>
+    <div id="wrapper" class="wrapper">
+      <div class="container">
+        <div class="row">
+          <div class="span3">
+            <div class="sidebar-nav">
+              <div id="search-header">
+                <form>
+                  <input id="st-search-input" name="search" type="text" value="" title="Press Enter for results" placeholder="Search the docs" style="width: 182px" class="input focused span3 st-search-input">
+                </form>
+              </div>
+              <div id="st-results-container"></div>
+              <div id="doc-nav" class="scroll-pane">
+                <ul id="nav">
+                  <li class="nav-section">
+                    <div class="nav-section-header"><a href="index.html">Home</a></div>
+                  </li>
+                  <!-- li.nav-section-->
+                  <!--   .nav-section-header-->
+                  <!--     a(href='https://www.youtube.com/user/c9ide/videos?flow=grid&view=1', target='_blank') Video Tutorials-->
+                  <li class="nav-section">
+                    <div class="nav-section-header"><a href="javascript:void(0)">Getting Started</a><i class="icon-chevron-down tocNavArrow"></i><i class="icon-chevron-up tocNavArrow"></i></div>
+                    <ul>
+                      <li class="nav-submenu-item"><a href="create_a_workspace.html">Create a workspace</a></li>
+                      <li class="nav-submenu-item"><a href="run_an_application.html">Run an application</a></li>
+                      <li class="nav-submenu-item"><a href="setup_a_database.html">Set up a database</a></li>
+                      <li class="nav-submenu-item"><a href="share_a_workspace.html">Share a workspace</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-section">
+                    <div class="nav-section-header"><a href="javascript:void(0)">Features</a><i class="icon-chevron-down tocNavArrow"></i><i class="icon-chevron-up tocNavArrow"></i></div>
+                    <ul>
+                      <li class="nav-submenu-item"><a href="supported_languages.html">Supported Languages</a></li>
+                      <li class="nav-submenu-item"><a href="syntax_highlighting_themes.html">Syntax Highlighting & Themes</a></li>
+                      <!-- li.nav-submenu-item-->
+                      <!--   a(href='collaboration.html') Collaboration-->
+                      <!-- li.nav-submenu-item-->
+                      <!--   a(href='colorpicker.html') Color Picker-->
+                      <li class="nav-submenu-item"><a href="multiple_cursors.html">Multiple Cursors</a></li>
+                      <!-- li.nav-submenu-item-->
+                      <!--   a(href='revisions.html') Revisions-->
+                      <li class="nav-submenu-item"><a href="language_analysis.html">Language Analysis</a></li>
+                      <li class="nav-submenu-item"><a href="autocompletion.html">Code Autocompletion</a></li>
+                      <!-- li.nav-submenu-item-->
+                      <!--   a(href='uploading_downloading.html') Uploading Files and Downloading Your Project-->
+                      <!-- li.nav-submenu-item-->
+                      <!--   a(href='gotofile_and_definition.html') Using Goto File and Goto Definition-->
+                      <li class="nav-submenu-item"><a href="searching_in_files.html">Searching and Replacing in Files</a></li>
+                      <!-- li.nav-submenu-item-->
+                      <!--   a(href='git_blame.html') Git Blame-->
+                      <!-- li.nav-submenu-item-->
+                      <!--   a(href='zen_mode.html') Zen Mode-->
+                      <li class="nav-submenu-item"><a href="custom_runners.html">Custom Runners</a>
+                        <ul>
+                          <li class="nav-submenu-item"><a href="java_runner.html">Making a Java Runner</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="nav-section">
+                    <div class="nav-section-header"><a href="javascript:void(0)">IDE Components</a><i class="icon-chevron-down tocNavArrow"></i><i class="icon-chevron-up tocNavArrow"></i></div>
+                    <ul>
+                      <!-- li.nav-submenu-item-->
+                      <!--   a(href='ide_overview.html') IDE Overview-->
+                      <li class="nav-submenu-item"><a href="the_editor.html">The Editor</a></li>
+                      <!-- li.nav-submenu-item-->
+                      <!--   a(href='console.html') The Console-->
+                      <li class="nav-submenu-item"><a href="dashboard.html">The Dashboard</a></li>
+                      <!-- li.nav-submenu-item-->
+                      <!--   a(href='project_bar.html') The Project Bar-->
+                      <!-- li.nav-submenu-item-->
+                      <!--   a(href='status_bar.html') The Status Bar-->
+                      <!-- li.nav-submenu-item-->
+                      <!--   a(href='terminal.html') The Terminal-->
+                      <!-- li.nav-submenu-item-->
+                      <!--   a(href='ide_preferences.html') IDE Preferences-->
+                      <!-- li.nav-submenu-item-->
+                      <!--   a(href='tab_functions.html') Tab Functions-->
+                      <!-- li.nav-submenu-item-->
+                      <!--   a(href='keybindings.html') Commands and Keybindings-->
+                    </ul>
+                  </li>
+                  <li class="nav-section">
+                    <div class="nav-section-header"><a href="javascript:void(0)">Creating Workspaces</a><i class="icon-chevron-down tocNavArrow"></i><i class="icon-chevron-up tocNavArrow"></i></div>
+                    <ul>
+                      <li class="nav-submenu-item"><a href="creating_new_workspace.html">Creating a New Workspace</a></li>
+                      <li class="nav-submenu-item"><a href="ssh_workspaces.html">Setting up SSH Workspaces</a></li>
+                      <li class="nav-submenu-item"><a href="setting_up_github_workspace.html">Setting up a GitHub Workspace</a></li>
+                      <li class="nav-submenu-item"><a href="setting_up_bitbucket_workspace.html">Setting up a Bitbucket Workspace</a></li>
+                      <li class="nav-submenu-item"><a href="setting_up_gitlab_workspace.html">Setting up a GitLab Workspace</a></li>
+                      <li class="nav-submenu-item"><a href="ftp_workspaces.html">Creating an FTP Workspace</a></li>
+                      <li class="nav-submenu-item"><a href="run_your_own_workspace.html">Running Your Own SSH Workspace</a></li>
+                      <li class="nav-submenu-item"><a href="picking_a_plan.html">Picking a Plan</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-section">
+                    <div class="nav-section-header"><a href="javascript:void(0)">Running and Debugging Code</a><i class="icon-chevron-down tocNavArrow"></i><i class="icon-chevron-up tocNavArrow"></i></div>
+                    <ul>
+                      <li class="nav-submenu-item"><a href="running_and_debugging_code.html">Running and Debugging Your Code</a></li>
+                      <li class="nav-submenu-item"><a href="common_errors.html">Common Errors</a></li>
+                      <li class="nav-submenu-item"><a href="terminal_monitor.html">Terminal Monitor</a></li>
+                      <li class="nav-submenu-item"><a href="writing_nodejs_hello_world.html">Writing a Node.js App</a>
+                        <ul>
+                          <li class="nav-submenu-item"><a href="installing_npm_modules.html">Installing NPM Modules</a></li>
+                          <li class="nav-submenu-item"><a href="creating_coffeescript_app.html">Creating a Coffeescript App</a></li>
+                        </ul>
+                      </li>
+                      <li class="nav-submenu-item"><a href="writing_a_python_app.html">Writing a Python App</a>
+                        <ul>
+                          <li class="nav-submenu-item"><a href="installing_python_packages.html">Installing Python Packages</a></li>
+                          <li class="nav-submenu-item"><a href="running_python_cgi.html">Running a Python CGI Server</a></li>
+                        </ul>
+                      </li>
+                      <li class="nav-submenu-item"><a href="writing_a_ruby_app.html">Writing a Ruby App</a>
+                        <ul>
+                          <li class="nav-submenu-item"><a href="installing_ruby_gems.html">Installing Ruby Gems</a></li>
+                          <li class="nav-submenu-item"><a href="running_a_rails_app.html">Running a Rails App</a></li>
+                        </ul>
+                      </li>
+                      <li class="nav-submenu-item"><a href="writing_a_php_app.html">Writing a PHP App</a>
+                        <ul>
+                          <li class="nav-submenu-item"><a href="editing_wordpress_sites.html">Editing Remote WordPress Websites</a></li>
+                          <li class="nav-submenu-item"><a href="running_wordpress_on_cloud9.html">Running WordPress on Cloud9</a></li>
+                        </ul>
+                      </li>
+                      <li class="nav-submenu-item"><a href="writing_a_go_app.html">Writing a Go App</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-section">
+                    <div class="nav-section-header"><a href="javascript:void(0)">Database and Persistence</a><i class="icon-chevron-down tocNavArrow"></i><i class="icon-chevron-up tocNavArrow"></i></div>
+                    <ul>
+                      <li class="nav-submenu-item"><a href="setting_up_mysql.html">Using MySQL</a>
+                        <ul>
+                          <li class="nav-submenu-item"><a href="setting_up_phpmyadmin.html">Using PHPMyAdmin</a></li>
+                        </ul>
+                      </li>
+                      <li class="nav-submenu-item"><a href="setting_up_mongodb.html">Using MongoDB</a></li>
+                      <li class="nav-submenu-item"><a href="setting_up_couchdb.html">Using CouchDB</a></li>
+                      <li class="nav-submenu-item"><a href="setting_up_postgresql.html">Using PostgreSQL</a></li>
+                      <li class="nav-submenu-item"><a href="setting_up_redis.html">Using Redis</a></li>
+                      <li class="nav-submenu-item"><a href="setting_up_sqlite3.html">Using SQLite</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-section">
+                    <div class="nav-section-header"><a href="javascript:void(0)">Deploying Code</a><i class="icon-chevron-down tocNavArrow"></i><i class="icon-chevron-up tocNavArrow"></i></div>
+                    <ul>
+                      <!-- li.nav-submenu-item-->
+                      <!--   a(href='deploying_code.html') Deploying Your Code-->
+                      <li class="nav-submenu-item"><a href="deploying_via_cli.html">Deploying via the Command Line</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-section">
+                    <div class="nav-section-header"><a href="javascript:void(0)">Popular Frameworks</a><i class="icon-chevron-down tocNavArrow"></i><i class="icon-chevron-up tocNavArrow"></i></div>
+                    <ul>
+                      <li class="nav-submenu-item"><a href="frameworks_angularjs.html">AngularJS</a></li>
+                      <li class="nav-submenu-item"><a href="frameworks_drupal.html">Drupal</a></li>
+                      <li class="nav-submenu-item"><a href="frameworks_express.html">Express</a></li>
+                      <li class="nav-submenu-item"><a href="frameworks_ghost.html">Ghost</a></li>
+                      <li class="nav-submenu-item"><a href="frameworks_ionic.html">Ionic</a></li>
+                      <li class="nav-submenu-item"><a href="frameworks_jekyll.html">Jekyll</a></li>
+                      <li class="nav-submenu-item"><a href="frameworks_joomla.html">Joomla</a></li>
+                      <li class="nav-submenu-item"><a href="frameworks_koa.html">KoaJS</a></li>
+                      <li class="nav-submenu-item"><a href="frameworks_laravel.html">Laravel</a></li>
+                      <li class="nav-submenu-item"><a href="frameworks_meteor.html">Meteor</a></li>
+                      <li class="nav-submenu-item"><a href="frameworks_symfony2.html">Symfony</a></li>
+                      <li class="nav-submenu-item"><a href="frameworks_wordpress.html">Wordpress</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-section">
+                    <div class="nav-section-header"><a href="javascript:void(0)">FAQ</a><i class="icon-chevron-down tocNavArrow"></i><i class="icon-chevron-up tocNavArrow"></i></div>
+                    <ul>
+                      <li class="nav-submenu-item"><a href="faq_general.html">General</a></li>
+                      <li class="nav-submenu-item"><a href="faq_php.html">PHP</a></li>
+                      <li class="nav-submenu-item"><a href="faq_python.html">Python</a></li>
+                      <li class="nav-submenu-item"><a href="faq_ssh.html">SSH workspaces</a></li>
+                    </ul>
+                  </li>
+                  <div class="alert alert-info">These articles are <a href="https://www.github.com/c9open/docs.c9.io">open source</a>! Feel free to pull and contribute.</div>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="span12 documentationContainer">
+            <div id="content">
+              <h1>Running a Python CGI server</h1>
+              <div><p>In order to run a Python CGI server, you can start by creating a new workspace. It doesn&#39;t have to be a Python/Django workspace, even a Custom workspace would do. You would need to tell the Apache2 server already installed on the workspace to allow CGI scripts and to make sure it knows where to look for them.</p>
+<p>Lets start by creating a very simple python CGI script: </p>
+<ol>
+<li>Create a folder within your workspace, name it <code>cgi-bin</code> (the name doesn&#39;t matter, although it is customary to use <code>cgi-bin</code>).</li>
+<li>Within the <code>cgi-bin</code> folder, create a new file. Lets name it <code>test.py</code> for now.</li>
+<li>Paste in the following:</li>
+</ol>
+<pre><code class="language-python"><span class="comment">#!/usr/bin/env python</span>
+
+<span class="keyword">print</span> <span class="string">"Content-type: text/html"</span>
+<span class="keyword">print</span> <span class="string">""</span>
+
+<span class="keyword">print</span> <span class="string">"""
+&lt;html&gt;
+
+&lt;head&gt;&lt;title&gt;Sample CGI Script&lt;/title&gt;&lt;/head&gt;
+
+&lt;body&gt;
+  &lt;h3&gt; Sample CGI Script &lt;/h3&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+"""</span></code></pre>
+<p>Now, once we have a file we want to serve, lets start up the Apache web server. We can do that by creating a new runner. You can create a new runner by clicking on the + icon on the right of the tabs like shown below:</p>
+<p><img src="./resources/images/newRunConfiguration-new.png" alt="New Run Configuration" width="" height=""></p>
+<p>then select Apache httpd (PHP, HTML)</p>
+<p><img src="./resources/images/apacheRunConfiguration.png" alt="Select Apache Run Configuration" width="" height=""></p>
+<p>You can save this configuration by entering a name to the right of the <code>Command:</code> label like shown below.</p>
+<p><img src="./resources/images/saveRunConfiguration.png" alt="Save Run Configuration" width="" height=""></p>
+<p>Click on the Run button and the apache server is ready to go. Click on the link that reads something like: <code>https://&lt;workspace-name&gt;-&lt;your-username&gt;.c9.io/</code> and you should see a browser come up with your folder listing. Clicking on the <code>cgi-bin</code> link and then the <code>test.py</code> link just shows up the text of the python file we wrote. Now that we have the server running, lets enable CGI on it.</p>
+<p>The first thing we want to do is to enable CGI mode. We can do that by typing the following within the Terminal:</p>
+<pre><code class="language-bash">sudo a2enmod cgi</code></pre>
+<p>Next, we need to tell Apache where our CGI files are present. We can do that by editing the <code>serve-cgi-bin.conf</code> file. Do the following:</p>
+<pre><code class="language-bash">sudo vi /etc/apache2/conf-available/serve-cgi-bin.conf</code></pre>
+<p>The file should read something like this:</p>
+<pre><code><span class="tag">&lt;<span class="title">IfModule</span> <span class="attribute">mod_alias.c</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">IfModule</span> <span class="attribute">mod_cgi.c</span>&gt;</span>
+                Define ENABLE_USR_LIB_CGI_BIN
+        <span class="tag">&lt;/<span class="title">IfModule</span>&gt;</span>
+
+        <span class="tag">&lt;<span class="title">IfModule</span> <span class="attribute">mod_cgid.c</span>&gt;</span>
+                Define ENABLE_USR_LIB_CGI_BIN
+        <span class="tag">&lt;/<span class="title">IfModule</span>&gt;</span>
+
+        <span class="tag">&lt;<span class="title">IfDefine</span> <span class="attribute">ENABLE_USR_LIB_CGI_BIN</span>&gt;</span>
+                ScriptAlias /cgi-bin/ /usr/lib/cgi-bin/
+                <span class="tag">&lt;<span class="title">Directory</span> "/<span class="attribute">usr</span>/<span class="attribute">lib</span>/<span class="attribute">cgi-bin</span>"&gt;</span>
+                        AllowOverride None
+                        Options +ExecCGI -MultiViews +SymLinksIfOwnerMatch
+                        Require all granted
+                <span class="tag">&lt;/<span class="title">Directory</span>&gt;</span>
+        <span class="tag">&lt;/<span class="title">IfDefine</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">IfModule</span>&gt;</span></code></pre>
+<p>We just need to modify the following section from:</p>
+<pre><code><span class="tag">&lt;<span class="title">IfDefine</span> <span class="attribute">ENABLE_USR_LIB_CGI_BIN</span>&gt;</span>
+    ScriptAlias /cgi-bin/ /usr/lib/cgi-bin/
+    <span class="tag">&lt;<span class="title">Directory</span> "/<span class="attribute">usr</span>/<span class="attribute">lib</span>/<span class="attribute">cgi-bin</span>"&gt;</span>
+        AllowOverride None
+        Options +ExecCGI -MultiViews +SymLinksIfOwnerMatch
+        Require all granted
+    <span class="tag">&lt;/<span class="title">Directory</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">IfDefine</span>&gt;</span></code></pre>
+<p>to </p>
+<pre><code><span class="tag">&lt;<span class="title">IfDefine</span> <span class="attribute">ENABLE_USR_LIB_CGI_BIN</span>&gt;</span>
+    ScriptAlias /cgi-bin/ /home/ubuntu/workspace/cgi-bin/
+    <span class="tag">&lt;<span class="title">Directory</span> "/<span class="attribute">home</span>/<span class="attribute">ubuntu</span>/<span class="attribute">workspace</span>/<span class="attribute">cgi-bin</span>"&gt;</span>
+        AllowOverride None
+        Options +ExecCGI -MultiViews +SymLinksIfOwnerMatch
+        AddHandler cgi-script .cgi .py
+        Require all granted
+    <span class="tag">&lt;/<span class="title">Directory</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">IfDefine</span>&gt;</span></code></pre>
+<p>Save this file and restart Apache.</p>
+<p>Once Apache restarts, navigate to <code>https://&lt;workspace-name&gt;-&lt;your-username&gt;.c9.io/cgi-bin/test.py</code> (replacing <code>&lt;workspace-name&gt;</code> and <code>&lt;your-username&gt;</code> with your workspace name and your username of course) and see what happens? In case you&#39;re seeing something like <strong>Internal Server Error</strong> we need to make the files under cgi-bin to be executable.</p>
+<p>You can do that by typing</p>
+<pre><code class="language-bash">chmod +x -R /home/ubuntu/workspace/cgi-bin</code></pre>
+<p>Restart Apache one last time and you should be able to see <strong>Sample CGI Script</strong>. </p>
+
+              </div>
+              <div id="disqus_thread"></div>
+            </div>
+          </div>
+          <div id="tocHolder" class="span2">
+          </div>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js" type="text/javascript"></script>
+        <script src="./assets/min/javascripts.js" type="text/javascript"></script>
+      </div>
+      <div class="push"></div>
+    </div>
+    <footer>
+      <iframe id="footer_iframe" height="290px" width="100%" src="" scrolling="no" frameborder="0"></iframe>
+    </footer>
+  </body>
+</html>
